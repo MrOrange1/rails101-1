@@ -10,7 +10,6 @@ class GroupsController < ApplicationController
   end
 
   def edit
-
   end
 
   def new
@@ -29,9 +28,6 @@ class GroupsController < ApplicationController
   end
 
   def update
-
-
-
     if @group.update(group_params)
       redirect_to groups_path, notice: "Update Success"
     else
@@ -41,7 +37,6 @@ class GroupsController < ApplicationController
 
   def destroy
     @group.destroy
-    flash[:alert] = "Group deleted"
     redirect_to groups_path, alert: "Group deleted"
   end
 
